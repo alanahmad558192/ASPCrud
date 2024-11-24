@@ -1,0 +1,55 @@
+﻿@model ASPCrud.Models.UpdateEmployeeViewModel
+
+@{
+    
+}
+
+<h1>Edit Employee</h1>
+<form method="post" action="View" class="mt-5">
+    <!-- Form for editing employee details -->
+    <!-- Employee ID (Read-only field to prevent modification) -->
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+
+    <!-- Employee Name (Editable field) -->
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+
+    <!-- Employee Email Address (Editable field, type ensures proper email format) -->
+    <div class="mb-3">
+        <label for="" class="form-label">Email Address</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+
+    <!-- Employee Salary (Editable field, type ensures numeric input) -->
+    <div class="mb-3">
+        <label for="" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+
+    <!-- Employee Date of Birth (Editable field, type ensures date input) -->
+    <div class="mb-3">
+        <label for="" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+    </div>
+
+    <!-- Employee Department (Editable field) -->
+    <div class="mb-3">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+
+    <!-- Submit Button (To save the updated details) -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <!-- Delete Button (To delete the employee record) -->
+    <button type="submit" class="btn btn-danger"
+            asp-action="Delete"
+            asp-controller="Employees">
+        Delete
+    </button>
+</form>

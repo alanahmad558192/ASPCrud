@@ -1,0 +1,48 @@
+﻿@model ASPCrud.Models.AddEmployeeViewModel
+
+@{
+            // View for adding a new employee
+}
+
+<h1>Add Employee</h1>
+
+<!-- Form to capture new employee details -->
+<form method="post" action="Add" class="mt-5">
+    <!-- Name field -->
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <!-- Binds to the 'Name' property in AddEmployeeViewModel -->
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+
+    <!-- Email field -->
+    <div class="mb-3">
+        <label for="" class="form-label">Email Address</label>
+        <!-- Binds to the 'Email' property in AddEmployeeViewModel -->
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+
+    <!-- Salary field -->
+    <div class="mb-3">
+        <label for="" class="form-label">Salary</label>
+        <!-- Binds to the 'Salary' property in AddEmployeeViewModel -->
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+
+    <!-- Date of Birth field -->
+    <div class="mb-3">
+        <label for="" class="form-label">Date Of Birth</label>
+        <!-- Binds to the 'DateOfBirth' property in AddEmployeeViewModel -->
+        <input type="date" class="form-control" asp-for="DateOfBirth">
+    </div>
+
+    <!-- Department field -->
+    <div class="mb-3">
+        <label for="" class="form-label">Department</label>
+        <!-- Binds to the 'Department' property in AddEmployeeViewModel -->
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+
+    <!-- Submit button to post form data -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
